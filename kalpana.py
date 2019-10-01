@@ -19,9 +19,9 @@ data['High-Low'] = (data.High - data.Low)/data.Low
 data['percent_change'] = data['Close'].pct_change()
 data['std_5']=data['percent_change'].rolling(5).std()
 data['ret_5']=data['percent_change'].rolling(5).mean()
-data.dropna(inplace=True)
-
-
+data.dropna(inplace=TRUE)
+x=data[['Open-Close','High-Low]','std_5','ret_5']]
+y=np.where(data['Close'].shift(-1)>data['Close'],1,-1)
 
 
 
