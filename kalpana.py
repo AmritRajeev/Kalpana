@@ -73,7 +73,7 @@ print(report)
 
 data['strategy_returns'] = data.percent_change.shift(-1) * model.predict(X)
 
-%matplotlib inline
+#matplotlib inline
 data.strategy_returns[split:].hist()
 plt.xlabel('Strategy returns (%)')
 plt.show()
