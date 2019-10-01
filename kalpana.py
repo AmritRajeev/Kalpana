@@ -3,7 +3,7 @@ import matplotlib as plt
 import pandas as pd
 from alpha_vantage.timeseries import TimeSeries
 import time
-from sklearn.ensemble import RandomForestClassifiere
+from sklearn.ensemble import RandomForestClassifier
 api_key="MNNSPRF08WG4DTL3"
 time_series = TimeSeries(key=api_key,output_format="pandas")
 data,meta_data=time_series.get_daily(symbol="MSFT",outputsize="full")
@@ -20,3 +20,12 @@ data['percent_change'] = data['close'].pct_change()
 data['std_5']=data['percent_change'].rolling(5).std()
 data['ret_5']=data['percent_change'].rolling(5).mean()
 data.dropna(inplace=TRUE)
+
+
+
+
+
+
+
+
+
