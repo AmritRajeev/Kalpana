@@ -22,6 +22,9 @@ data['ret_5']=data['percent_change'].rolling(5).mean()
 data.dropna(inplace=True)
 x=data[['Open-Close','High-Low]','std_5','ret_5']]
 y=np.where(data['Close'].shift(-1)>data['Close'],1,-1)
+dataset_length = data.shape[0]
+split=int(dataset_length*0.80)
+split
 
 
 
