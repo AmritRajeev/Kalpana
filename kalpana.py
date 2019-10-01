@@ -16,7 +16,7 @@ data=data.rename(columns={
                          })
 data['Open-Close'] = (data.Open - data.Close)/data.Open
 data['High-Low'] = (data.High - data.Low)/data.Low
-data['percent_change'] = data['close'].pct_change()
+data['percent_change'] = data['Close'].pct_change()
 data['std_5']=data['percent_change'].rolling(5).std()
 data['ret_5']=data['percent_change'].rolling(5).mean()
 data.dropna(inplace=TRUE)
